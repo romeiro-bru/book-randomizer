@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './style.css';
+import { loading } from '../../assets/images/loading.png';
 
 const api = 'https://www.googleapis.com/books/v1/volumes'
 
@@ -16,6 +17,9 @@ export function Search() {
     setSearch(e.target.value)
     fetchBooks()
   }
+  console.log(books)
+
+  // validação thumb
 
   return (
     <div>
@@ -26,6 +30,8 @@ export function Search() {
           return (
             <ul>
               <li key={i}>{book.volumeInfo.title}</li>
+              <p>{book.volumeInfo.categories}</p>
+              <img src={book.volumeInfo.imageLinks.thumbnail} alt="cover" />
             </ul>
           )
         })}
