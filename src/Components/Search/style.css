@@ -2,7 +2,7 @@ ul {
   list-style: none;
 }
 
-input {
+.search-box input {
   padding: 0.5rem 1rem;
   margin: 1rem 0 1.3rem 0;
   border: none;
@@ -15,15 +15,27 @@ input {
   right: 26.3rem;
 }
 
+.search-box { grid-area: form; }
+.genres { grid-area: menu; }
+.books { grid-area: main; }
+
+.container {
+  display: grid;
+  grid-template: auto / auto auto;
+  grid-template-areas: 
+  'menu form form'
+  'menu main main';
+}
+
 .genres {
-  position: fixed;
   display: flex;
   flex-direction: column;
+  position: fixed;
   left: 3rem;
-  width: 15%;
-  /* height: 100%; */
-  background-color: #d0b4e8;
+  width: 13%;
   border-radius: 0.3rem;
+  padding: 0;
+  background-color: #d0b4e8;
 }
 
 .genres button {
@@ -53,18 +65,8 @@ input {
 }
 
 .books {
-  border: 1px solid seagreen;
-  /* display: flex;
+  display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  padding: 32px 16px; */
-
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  align-items: end;
+  margin-left: 20%;
+  align-items: flex-end;
 }
-
-.books li {
-  border: 1px solid blue;
-}
-
