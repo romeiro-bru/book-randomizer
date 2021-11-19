@@ -26,15 +26,15 @@ export function Search() {
   }
 
   return (
-    <div>
-      <form>
-        <div className="search-box">
+    <section className="container">
+      <form className="search-box">
+        <div>
           <input onChange={handleChange} type="text" placeholder="Search" />
           <img src={mag} alt="search" />
         </div>
       </form>
 
-      <aside className="genres">
+      <menu className="genres">
         <button onClick={handleClick} value="fantasy">
           <img src={fantasy} alt="img" />
               Fantasy
@@ -51,9 +51,9 @@ export function Search() {
           <img src={poetry} alt="img" />
             Poetry
         </button>
-      </aside>
+      </menu>
 
-      <section className="books">
+      <main className="books">
         {books.map((book, i) => {
           return (
             <ul>
@@ -66,7 +66,7 @@ export function Search() {
             </ul>
           )
         })}
-      </section>
-    </div>
+      </main>
+    </section>
   );
 }
