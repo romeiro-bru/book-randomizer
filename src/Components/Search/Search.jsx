@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './style.css';
-import mag from '../../assets/images/search.png';
 import fantasy from '../../assets/images/wizard.png';
 import fiction from '../../assets/images/ufo.png';
 import romance from '../../assets/images/talk.png';
@@ -28,10 +27,7 @@ export function Search() {
   return (
     <section className="container">
       <form className="search-box">
-        <div>
-          <input onChange={handleChange} type="text" placeholder="Search" />
-          <img src={mag} alt="search" />
-        </div>
+        <input onChange={handleChange} type="text" placeholder="Search" />
       </form>
 
       <menu className="genres">
@@ -58,10 +54,16 @@ export function Search() {
           return (
             <ul>
               <li key={i}>
-                <p>{book.volumeInfo.title}
-                </p>
-                <p>{book.volumeInfo.categories}</p>
                 <img src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} alt="cover" />
+                <div>
+                  <h2 className="book-title">{book.volumeInfo.title}</h2>
+                  <p className="book-author">{book.volumeInfo.authors}</p>
+                  <p className="book-categorie">
+                    {book.volumeInfo.categories !== undefined ?
+                      book.volumeInfo.categories : 'Others'
+                    }
+                  </p>
+                </div>
               </li>
             </ul>
           )
