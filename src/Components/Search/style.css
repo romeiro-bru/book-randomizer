@@ -1,8 +1,70 @@
-input {
-  padding: 0.5rem 1rem;
-  margin: 1rem 0 2rem 0;
-}
-
-.books ul {
+ul {
   list-style: none;
 }
+
+input {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0 1.3rem 0;
+  border: none;
+}
+
+.search-box img {
+  position: absolute;
+  width: 1.5rem;
+  top: 6.2rem;
+  right: 26.3rem;
+}
+
+.genres {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 3rem;
+  width: 15%;
+  /* height: 100%; */
+  background-color: #d0b4e8;
+  border-radius: 0.3rem;
+}
+
+.genres button {
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.4rem;
+  background: transparent;
+  color: #164f86;
+  font-weight: bold;
+  line-height: 3rem;
+  outline: none;
+}
+
+.genres img {
+  width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 0.3rem 0.3rem 0;
+}
+
+.genres button:hover {
+  background: #b6a3e4;
+  transition: 0.8s;
+}
+
+.genres button:focus{
+  background: #b6a3e4;
+}
+
+.books {
+  border: 1px solid seagreen;
+  /* display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 32px 16px; */
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: end;
+}
+
+.books li {
+  border: 1px solid blue;
+}
+
