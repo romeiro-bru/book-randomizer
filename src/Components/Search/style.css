@@ -8,13 +8,6 @@ ul {
   border: none;
 }
 
-.search-box img {
-  position: absolute;
-  width: 1.5rem;
-  top: 6.2rem;
-  right: 26.3rem;
-}
-
 .search-box { grid-area: form; }
 .genres { grid-area: menu; }
 .books { grid-area: main; }
@@ -46,13 +39,10 @@ ul {
   color: #164f86;
   font-weight: bold;
   line-height: 3rem;
+  font-family: 'Nunito', sans-serif;  
+  font-weight: 400;
+  font-size: 0.9rem;
   outline: none;
-}
-
-.genres img {
-  width: 1.5rem;
-  vertical-align: middle;
-  margin: 0 0.3rem 0.3rem 0;
 }
 
 .genres button:hover {
@@ -63,10 +53,51 @@ ul {
 .genres button:focus{
   background: #b6a3e4;
 }
+.genres img {
+  width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 0.3rem 0.3rem 0;
+}
 
 .books {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1.3rem;
+  margin: 1rem 2rem 2rem 11.5rem;
+  align-items: flex-start;
+}
+.books ul {
+  border-radius: 0.5rem;
+  background: linear-gradient(#a088f340, rgba(0, 0, 0, 0));
+}
+
+.books li {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: 20%;
-  align-items: flex-end;
+}
+
+.books img {
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  transform: translate(0, -1.5rem);
+  animation: zoomin 0.5s;
+}
+.books img:hover {
+  transform: translate(0, -1.3rem) scale(1.1);
+}
+
+.book-title, .book-author {
+  width: 14rem;
+  font-weight: bold; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.book-categorie {
+  background-color: #d0b4e882;
+  padding: 0.4rem 1rem;
+  width: min-content;
+  border-radius: 5rem;
+  font-size: 0.8rem;
 }
