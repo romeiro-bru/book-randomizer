@@ -22,33 +22,34 @@ ul {
   border: none;
   border-radius: 0.3rem;
   padding: 0.4rem 0.4rem;
+  margin-bottom: 0.2rem;
   background: transparent;
   text-transform: capitalize;
-  color: plum;
+  color: var(--secondary-color);
   line-height: 3rem;
   font-family: 'Nunito', sans-serif;  
-  font-size: 1.1rem;
+  font-size: 1rem;
   outline: none;
 }
 
 .genres button:hover {
-  background: #624d929c;
+  background: var(--card-bg-color);
   transition: 0.8s;
 }
 
 .genres button:focus{
-  background: #624d929c;
+  background: var(--card-bg-color);
 }
 .genres img {
   width: 1.5rem;
   vertical-align: middle;
-  margin: 0 0.3rem 0.3rem 0;
+  margin: 0 0.5rem 0.3rem 0;
 }
 
-@media (max-width: 1024px) {
-  .genres {
-    width: 12%;
-  }  
+@media (max-width: 900px) {
+  .genres button {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 768px) {
