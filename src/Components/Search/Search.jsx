@@ -6,7 +6,15 @@ import fiction from '../../assets/images/ufo.png';
 import romance from '../../assets/images/talk.png';
 import poetry from '../../assets/images/poetry.png';
 
-const api = 'https://www.googleapis.com/books/v1/volumes'
+import { Books } from '../Books/Books';
+
+const bookCategories = [
+  { name: 'fantasy', img: fantasy },
+  { name: 'fiction', img: fiction },
+  { name: 'romance', img: romance },
+  { name: 'poetry', img: poetry }
+]
+const api = 'https://www.googleapis.com/books/v1/volumes';
 
 export function Search() {
   const [search, setSearch] = useState('')
@@ -31,44 +39,16 @@ export function Search() {
       </form>
 
       <menu className="genres">
-        <button onClick={handleClick} value="fantasy">
-          <img src={fantasy} alt="img" />
-              Fantasy
-        </button>
-        <button onClick={handleClick} value="fiction">
-          <img src={fiction} alt="img" />
-              Fiction
-        </button>
-        <button onClick={handleClick} value="romance">
-          <img src={romance} alt="img" />
-            Romance
-        </button>
-        <button onClick={handleClick} value="poetry">
-          <img src={poetry} alt="img" />
-            Poetry
-        </button>
+        {
+          bookCategories.map((category, i) => (
+            <button key={i} value={category.name} onClick={handleClick}>
+              <img src={category.img} alt="img" />
+              {category.name}
+            </button>
+          ))}
       </menu>
 
-      <main className="books">
-        {books.map((book, i) => {
-          return (
-            <ul>
-              <li key={i}>
-                <img src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} alt="cover" />
-                <div>
-                  <h2 className="book-title">{book.volumeInfo.title}</h2>
-                  <p className="book-author">{book.volumeInfo.authors}</p>
-                  <p className="book-categorie">
-                    {book.volumeInfo.categories !== undefined ?
-                      book.volumeInfo.categories : 'Others'
-                    }
-                  </p>
-                </div>
-              </li>
-            </ul>
-          )
-        })}
-      </main>
+      <Books books={books} />
     </section>
   );
 }
