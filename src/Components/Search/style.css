@@ -8,27 +8,15 @@ ul {
   border: none;
 }
 
-.search-box { grid-area: form; }
-.genres { grid-area: menu; }
-.books { grid-area: main; }
-
-.container {
-  display: grid;
-  grid-template: auto / auto auto;
-  grid-template-areas: 
-  'menu form form'
-  'menu main main';
-}
-
 .genres {
   display: flex;
   flex-direction: column;
   position: fixed;
-  left: 3rem;
+  left: 1.5rem;
   width: 13%;
   border-radius: 0.3rem;
   padding: 0;
-  background-color: #d0b4e8;
+  background-color: transparent;
 }
 
 .genres button {
@@ -36,22 +24,20 @@ ul {
   border-radius: 0.3rem;
   padding: 0.4rem 0.4rem;
   background: transparent;
-  color: #164f86;
-  font-weight: bold;
+  color: plum;
   line-height: 3rem;
   font-family: 'Nunito', sans-serif;  
-  font-weight: 400;
   font-size: 0.9rem;
   outline: none;
 }
 
 .genres button:hover {
-  background: #b6a3e4;
+  background: #624d929c;
   transition: 0.8s;
 }
 
 .genres button:focus{
-  background: #b6a3e4;
+  background: #624d929c;
 }
 .genres img {
   width: 1.5rem;
@@ -60,12 +46,12 @@ ul {
 }
 
 .books {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 1.3rem;
-  margin: 1rem 2rem 2rem 11.5rem;
-  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2rem 1rem 2rem 8.56rem;
 }
+
 .books ul {
   border-radius: 0.5rem;
   background: linear-gradient(#a088f340, rgba(0, 0, 0, 0));
@@ -73,11 +59,12 @@ ul {
 
 .books li {
   display: flex;
+  text-align: left;
 }
 
 .books img {
   border-radius: 0.5rem;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
   transform: translate(0, -1.5rem);
@@ -94,10 +81,42 @@ ul {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.book-author {
+  font-weight: normal;
+}
+
 .book-categorie {
   background-color: #d0b4e882;
   padding: 0.4rem 1rem;
   width: min-content;
   border-radius: 5rem;
   font-size: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+  .genres {
+    width: 12%;
+  }  
+}
+
+@media (max-width: 768px) {
+  .genres {
+    display: flex;
+    flex-direction: row;
+    position: initial;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 1.7rem;
+}
+.genres button {
+  line-height: 1rem;
+}
+  .books {
+    display: inline-block;
+    margin: 1.5rem 0;
+  }
+  .book-title, .book-author {
+    width: 12rem;
+  }
 }
