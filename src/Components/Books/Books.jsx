@@ -5,8 +5,8 @@ export function Books({ books }) {
     <main className="books">
       {books.map((book, i) => {
         return (
-          <ul>
-            <li key={i}>
+          <ul key={i}>
+            <li>
               <img src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} alt="cover" />
               <div>
                 <h2 className="book-title">{book.volumeInfo.title}</h2>
