@@ -4,10 +4,16 @@
   justify-content: space-evenly;
   margin: 2rem 1rem 2rem 10rem;
 }
-
 .books ul {
   border-radius: 0.5rem;
   background: linear-gradient(var(--card-bg-color), rgba(0, 0, 0, 0));
+}
+
+.books ul:nth-child(2), .books ul:nth-child(5),.books ul:nth-child(8) {
+  background: linear-gradient(var(--card-bg-color2), rgba(0, 0, 0, 0));
+}
+.books ul:nth-child(3), .books ul:nth-child(6), .books ul:last-child {
+  background: linear-gradient(var(--card-bg-color3), rgba(0, 0, 0, 0));
 }
 
 .books li {
