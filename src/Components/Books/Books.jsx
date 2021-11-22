@@ -11,6 +11,7 @@ export function Books({ books }) {
               <div>
                 <h2 className="book-title">{book.volumeInfo.title}</h2>
                 <p className="book-author">{book.volumeInfo.authors}</p>
+                <p>{book.volumeInfo.pageCount} pages</p>
                 <p className="book-categorie">
                   {book.volumeInfo.categories !== undefined ?
                     book.volumeInfo.categories : 'Others'
