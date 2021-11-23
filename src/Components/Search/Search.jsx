@@ -5,6 +5,7 @@ import fantasy from '../../assets/images/wizard.png';
 import fiction from '../../assets/images/ufo.png';
 import romance from '../../assets/images/talk.png';
 import poetry from '../../assets/images/poetry.png';
+// import loading from '../../assets/images/loading.png';
 
 import { Books } from '../Books/Books';
 
@@ -19,15 +20,18 @@ const api = 'https://www.googleapis.com/books/v1/volumes';
 export function Search() {
   const [search, setSearch] = useState('')
   const [books, setBooks] = useState([])
+  // const [hiddenSpin, setHiddenSpin] = useState(true)
 
   const fetchBooks = async () => {
     const response = await axios.get(`${api}?q=${search}`)
     setBooks(response.data.items)
   }
+
   const handleChange = (e) => {
     setSearch(e.target.value)
     fetchBooks()
   }
+
   const handleClick = (e) => {
     console.log(e.target.value)
   }
@@ -48,6 +52,7 @@ export function Search() {
           ))}
       </menu>
 
+      {/* <img hidden={hiddenSpin} src={loading} className="spin" alt="loading..." /> */}
       <Books books={books} />
     </section>
   );
