@@ -7,7 +7,7 @@ export function Books({ books }) {
         return (
           <ul key={i}>
             <li>
-              <a href={book.volumeInfo.infoLink} target="_blank">
+              <a href={book.volumeInfo.infoLink} target="_blank" rel="noreferrer">
                 <img src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} alt="cover" />
               </a>
               <div>
