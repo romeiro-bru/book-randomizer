@@ -7,10 +7,13 @@ export function Books({ books }) {
         return (
           <ul key={i}>
             <li>
-              <img src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} alt="cover" />
+              <a href={book.volumeInfo.infoLink} target="_blank">
+                <img src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} alt="cover" />
+              </a>
               <div>
                 <h2 className="book-title">{book.volumeInfo.title}</h2>
                 <p className="book-author">{book.volumeInfo.authors}</p>
+                <p>{book.volumeInfo.pageCount} pages</p>
                 <p className="book-categorie">
                   {book.volumeInfo.categories !== undefined ?
                     book.volumeInfo.categories : 'Others'
