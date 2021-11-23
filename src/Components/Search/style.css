@@ -49,6 +49,18 @@ ul {
   margin: 0 0.5rem 0.3rem 0;
 }
 
+.spin {
+  width: 2rem;
+  margin-top: 1px;
+  animation: spin 3.5s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 900px) {
   .genres button {
     font-size: 0.9rem;
