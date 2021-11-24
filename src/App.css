@@ -17,6 +17,10 @@ body {
     'Ubuntu', sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 .App {
   text-align: center;
 }

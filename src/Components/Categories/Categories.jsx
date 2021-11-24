@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import './style.css';
 
 import fantasy from '../../assets/images/wizard.png';
 import fiction from '../../assets/images/ufo.png';
@@ -12,19 +13,17 @@ const bookCategories = [
   { name: 'romance', img: romance },
   { name: 'poetry', img: poetry }
 ]
-const api = 'https://www.googleapis.com/books/v1/volumes';
+const url = 'https://www.googleapis.com/books/v1/volumes';
 
 export function Categories() {
   const [category, setCategory] = useState([])
 
   const handleClick = (e) => {
     const fetchCategory = async () => {
-      const res = await axios.get(`${api}/?q=subject:${e.target.value}`)
-      setCategory(res.data.items)
+      const response = await axios.get(`${url}/?q=subject:${e.target.value}`)
+      setCategory(response.data.items)
     }
     fetchCategory()
-    console.log(1, e.target.value)
-    console.log(2, category)
   }
 
   return (
@@ -50,7 +49,11 @@ export function Categories() {
                 <div>
                   <h2 className="book-title">{book.volumeInfo.title}</h2>
                   <p className="book-author">{book.volumeInfo.authors}</p>
-                  <p>{book.volumeInfo.pageCount} pages</p>
+                  <p>
+                    {book.volumeInfo.pageCount !== undefined ?
+                      book.volumeInfo.pageCount : '120'
+                    } pages
+                  </p>
                   <p className="book-categorie">
                     {book.volumeInfo.categories !== undefined ?
                       book.volumeInfo.categories : 'Others'
