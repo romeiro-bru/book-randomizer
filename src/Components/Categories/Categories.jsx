@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import './style.css';
 
 import fantasy from '../../assets/images/wizard.png';
 import fiction from '../../assets/images/ufo.png';
