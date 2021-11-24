@@ -13,15 +13,15 @@ const bookCategories = [
   { name: 'romance', img: romance },
   { name: 'poetry', img: poetry }
 ]
-const api = 'https://www.googleapis.com/books/v1/volumes';
+const url = 'https://www.googleapis.com/books/v1/volumes';
 
 export function Categories() {
   const [category, setCategory] = useState([])
 
   const handleClick = (e) => {
     const fetchCategory = async () => {
-      const res = await axios.get(`${api}/?q=subject:${e.target.value}`)
-      setCategory(res.data.items)
+      const response = await axios.get(`${url}/?q=subject:${e.target.value}`)
+      setCategory(response.data.items)
     }
     fetchCategory()
   }
