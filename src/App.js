@@ -1,6 +1,7 @@
 import './App.css';
 import github from './assets/images/github.png';
 import { Search } from './Components/Search/Search';
+import { Categories } from './Components/Categories/Categories';
 
 function Footer() {
   return (
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Search />
+      <Categories />
       <Footer />
     </div>
   );
