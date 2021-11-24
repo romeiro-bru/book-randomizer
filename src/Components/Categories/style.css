@@ -1,0 +1,37 @@
+.genres {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 1.5rem;
+  width: 13%;
+  border-radius: 0.3rem;
+  padding: 0;
+}
+
+.genres button {
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.4rem;
+  margin-bottom: 0.2rem;
+  background: transparent;
+  text-transform: capitalize;
+  color: var(--secondary-color);
+  line-height: 3rem;
+  font-family: 'Nunito', sans-serif;  
+  font-size: 1rem;
+  outline: none;
+}
+
+.genres button:hover {
+  background: var(--card-bg-color);
+  transition: 0.8s;
+}
+
+.genres button:focus{
+  background: var(--card-bg-color);
+}
+.genres img {
+  width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 0.5rem 0.3rem 0;
+}
