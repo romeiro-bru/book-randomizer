@@ -23,8 +23,6 @@ export function Categories() {
       setCategory(res.data.items)
     }
     fetchCategory()
-    console.log(1, e.target.value)
-    console.log(2, category)
   }
 
   return (
