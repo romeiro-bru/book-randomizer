@@ -3,6 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Categories } from './Components/Categories/Categories';
 import { Books } from './Components/Books/Books';
+import { Randomizer } from './Components/Randomizer/Randomizer';
 import github from './assets/images/github.png';
 
 const url = 'https://www.googleapis.com/books/v1/volumes';
@@ -49,7 +50,10 @@ function App() {
         <input onChange={handleChange} type="text" placeholder="Search" />
       </form>
 
-      <Categories handleClick={handleClick} />
+      <aside>
+        <Categories handleClick={handleClick} />
+        <Randomizer />
+      </aside>
       <Books hide={hide} books={books} category={category} />
       <Footer />
     </div>
