@@ -25,6 +25,10 @@ ul {
   text-align: center;
 }
 
+.App aside {
+  display: flex;
+}
+
 .github {
   position: fixed;
   bottom: 1.5rem;
@@ -47,6 +51,9 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .App aside {
+    display: inline-block;
+  }
   .github {
     width: 1.8rem;
     left: 0.7rem;
