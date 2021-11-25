@@ -5,10 +5,10 @@
 </p>
 
 ## Features
-* Selecione um gênero literário ou ✔️
-* Procure por um título no campo de busca ✔️
-* Crie uma lista de livros que gostaria de ler  ✖️ 
-* Clique no randomizador para descobrir qual será sua próxima leitura ✖️ 
+* Pick a literary genre or ✔️
+* Search for a title or author in the search field  ✔️
+* Create a list of books you would like to read  ✖️ 
+* Click on the randomizer to see what your next reading will be ✖️ 
 
 ## Api Reference
 The [Google Books API](https://developers.google.com/books/docs/overview) has a vision to digitize the world's books.
