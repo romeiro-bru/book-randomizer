@@ -4,6 +4,12 @@
   <img  src="https://media.giphy.com/media/3o7btW1Js39uJ23LAA/giphy.gif"  height="150" alt="book">
 </p>
 
+## Features
+* Selecione um gênero literário ou ✔️
+* Procure por um título no campo de busca ✔️
+* Crie uma lista de livros que gostaria de ler  ✖️ 
+* Clique no randomizador para descobrir qual será sua próxima leitura ✖️ 
+
 ## Api Reference
 The [Google Books API](https://developers.google.com/books/docs/overview) has a vision to digitize the world's books.
 
