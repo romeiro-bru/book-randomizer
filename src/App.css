@@ -37,8 +37,33 @@ ul {
   opacity: 0.5;
   transition: 0.9s;
 }
+.search-box input {
+  padding: 0.5rem 1rem;
+  margin: 3rem 0 1.3rem 0;
+  border: none;
+  color: var(--secondary-color);
+  font-family: 'Nunito', sans-serif;  
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .genres button {
+    font-size: 0.9rem;
+  }
+}
 
 @media (max-width: 768px) {
+  .genres {
+    display: flex;
+    flex-direction: row;
+    position: initial;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 1.7rem;
+}
+  .genres button {
+    line-height: 1rem;
+  }
   .github {
     width: 1.8rem;
     left: 0.7rem;
