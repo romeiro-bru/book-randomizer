@@ -5,6 +5,8 @@ import { Categories } from './Components/Categories/Categories';
 import { Books } from './Components/Books/Books';
 import github from './assets/images/github.png';
 
+const url = 'https://www.googleapis.com/books/v1/volumes';
+
 function Footer() {
   return (
     <footer>
@@ -14,7 +16,6 @@ function Footer() {
     </footer>
   )
 }
-const url = 'https://www.googleapis.com/books/v1/volumes';
 
 function App() {
   const [search, setSearch] = useState('')
