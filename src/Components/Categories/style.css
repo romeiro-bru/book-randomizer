@@ -1,6 +1,7 @@
 .genres {
   position: fixed;
-  left: 1.5rem;
+  top: 10rem;
+  left: 1.3rem;
   width: 13%;
   padding: 0;
 }
