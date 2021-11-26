@@ -16,7 +16,7 @@ export function Modal({ handleClick, bookTitle, bookImg }) {
             Your next reading is..
           </p>
           <h1>
-            {bookTitle !== undefined ? bookTitle : 'Select a category or Make your list.'}
+            {bookTitle}
           </h1>
           <img src={bookImg} alt="cover" />
         </div>
