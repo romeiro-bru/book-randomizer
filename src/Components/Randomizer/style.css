@@ -1,0 +1,35 @@
+.randomize {
+  left: 3.3%;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  font-family: 'Nunito', sans-serif; 
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: var(--card-bg-color);
+  color: var(--primary-color);
+  text-align: center;
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.2rem;
+  margin-left: 5rem;
+  
+  bottom: 100%;
+  left: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+ .randomize {
+   position: initial;
+ }
+}
