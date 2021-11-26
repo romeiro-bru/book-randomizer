@@ -1,21 +1,21 @@
 import './style.css';
 import dices from '../../assets/images/dices.svg';
 
-export function Modal() {
+export function Modal({ handleClick, randomized }) {
   return (
     <>
-      <div className="container">
-        <div className="interior">
-          <a className="btn" href="#open-modal">👋 Basic CSS-Only Modal</a>
-        </div>
+      <div>
+        <a onClick={handleClick} className="randomize-btn" href="#open-modal">Randomize</a>
       </div>
 
       <div id="open-modal" className="modal-window">
         <div>
-          <a href="#" title="Close" className="modal-close">X</a>
-          <h1>Voilà!</h1>
-          <img src={dices} alt="dices" />
-          <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
+          <a href="#" className="modal-close">X</a>
+          <h3>
+            <img src={dices} alt="dices" />
+            Your next reading is..
+          </h3>
+          <h1>{randomized}!</h1>
         </div>
       </div>
     </>
