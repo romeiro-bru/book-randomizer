@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Categories } from './Components/Categories/Categories';
 import { Books } from './Components/Books/Books';
@@ -24,15 +24,21 @@ function App() {
   const [category, setCategory] = useState([])
   const [hide, setHide] = useState(true)
 
-  const fetchBooks = async () => {
-    const response = await axios.get(`${url}?q=${search}`)
-    setBooks(response.data.items)
-  }
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const response = await axios.get(`${url}?q=${search}`);
+        setBooks(response.data.items);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchBooks();
+  }, [search]);
 
   const handleChange = (e) => {
     setSearch(e.target.value)
     setHide(false)
-    fetchBooks()
   }
 
   const handleClick = (e) => {
@@ -52,7 +58,7 @@ function App() {
 
       <aside>
         <Categories handleClick={handleClick} />
-        <Randomizer />
+        <Randomizer category={category} />
       </aside>
       <Books hide={hide} books={books} category={category} />
       <Footer />
