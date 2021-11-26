@@ -1,6 +1,5 @@
 .randomize {
   left: 3.3%;
-  position: fixed;
 }
 
 .tooltip {
@@ -11,35 +10,22 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: fit-content;
+  width: max-content;
   background-color: var(--card-bg-color);
   color: var(--primary-color);
   text-align: center;
   border-radius: 0.4rem;
   padding: 0.4rem 0.2rem;
-
+  margin-left: 5rem;
+  
+  bottom: 100%;
+  left: 50%;
   position: absolute;
   z-index: 1;
 }
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
-}
-
-.randomize button {
-  border: none;
-  margin: 0.3rem 0.4rem ;
-  background: var(--primary-color);
-  color: var(--secondary-color);
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  font-family: 'Nunito', sans-serif; 
-  outline: none;
-}
-
-.randomize button:hover {
-  opacity: 0.9;
-  transition: 0.8s;
 }
 
 @media (max-width: 768px) {
