@@ -10,15 +10,15 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: max-content;
+  width: 7rem;
   background-color: var(--card-bg-color);
   color: var(--primary-color);
   text-align: center;
   border-radius: 0.4rem;
   padding: 0.4rem 0.2rem;
   margin-left: 5rem;
-  
-  bottom: 100%;
+  font-weight: bold;
+  top: 50%;
   left: 50%;
   position: absolute;
   z-index: 1;
@@ -31,5 +31,13 @@
 @media (max-width: 768px) {
  .randomize {
    position: initial;
+ }
+ .tooltip .tooltiptext {
+  width: 7rem;
+  margin-left: 0rem;
+  font-weight: bold;
+  top: 24%;
+  left: 60%;
+  position: absolute;
  }
 }
