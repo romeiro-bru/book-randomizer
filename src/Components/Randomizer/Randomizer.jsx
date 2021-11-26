@@ -18,7 +18,7 @@ export function Randomizer({ category }) {
     <div className="randomize tooltip">
       <Modal handleClick={handleClick}
         bookImg={randomized.imageLinks !== undefined ? randomized.imageLinks.thumbnail : ""}
-        bookTitle={randomized.title} />
+        bookTitle={randomized.title !== undefined ? randomized.title : 'Select a category or Make your list.'} />
       <p className="tooltiptext">Select a category or list and click here to generate your next reading!</p>
     </div>
   )
