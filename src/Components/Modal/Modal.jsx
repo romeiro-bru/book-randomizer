@@ -1,7 +1,7 @@
 import './style.css';
 import dices from '../../assets/images/dices.svg';
 
-export function Modal({ handleClick, randomized }) {
+export function Modal({ handleClick, bookTitle, bookImg }) {
   return (
     <>
       <div>
@@ -11,11 +11,14 @@ export function Modal({ handleClick, randomized }) {
       <div id="open-modal" className="modal-window">
         <div>
           <a href="#" className="modal-close">X</a>
-          <h3>
+          <p>
             <img src={dices} alt="dices" />
             Your next reading is..
-          </h3>
-          <h1>{randomized}!</h1>
+          </p>
+          <h1>
+            {bookTitle !== undefined ? bookTitle : 'Select a category or Make your list.'}
+          </h1>
+          <img src={bookImg} alt="cover" />
         </div>
       </div>
     </>
