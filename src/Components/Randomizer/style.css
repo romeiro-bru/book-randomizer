@@ -28,12 +28,18 @@
   visibility: visible;
 }
 
+.tooltiptext img {
+  width: 1.5rem;
+  vertical-align: bottom;
+  margin-left: 0.4rem;
+}
+
 @media (max-width: 768px) {
  .randomize {
    position: initial;
  }
  .tooltip .tooltiptext {
-  width: 7rem;
+  width: 8.3rem;
   margin-left: 0rem;
   font-weight: bold;
   top: 24%;
