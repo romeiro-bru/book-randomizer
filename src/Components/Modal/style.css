@@ -46,12 +46,6 @@
   background: var(--bg-color);
 }
 
-.modal-window p img {
-  width: 1.5rem;
-  vertical-align: bottom;
-  margin-left: 0.4rem;
-}
-
 .modal-window img {
   width: 4rem;
   border-radius: 0.2rem;

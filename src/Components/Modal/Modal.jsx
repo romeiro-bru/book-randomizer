@@ -1,5 +1,4 @@
 import './style.css';
-import dices from '../../assets/images/dices.svg';
 
 export function Modal({ handleClick, bookTitle, bookImg }) {
   return (
@@ -12,7 +11,6 @@ export function Modal({ handleClick, bookTitle, bookImg }) {
         <div>
           <a href="#" className="modal-close">X</a>
           <p>
-            <img src={dices} alt="dices" />
             Your next reading is..
           </p>
           <h1>
