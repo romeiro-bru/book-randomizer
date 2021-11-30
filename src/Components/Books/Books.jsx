@@ -1,4 +1,5 @@
 import './style.css';
+import add from '../../assets/images/add.svg';
 
 const url = 'http://books.google.com/books/'
 
@@ -25,6 +26,7 @@ export function Books({ books, category, hide }) {
                         }
                       </p>
                     </div>
+                    <img className="add" src={add} alt="+" />
                   </li>
                 </ul>
               )
