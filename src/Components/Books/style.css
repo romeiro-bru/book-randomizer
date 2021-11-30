@@ -32,15 +32,21 @@
   transform: translate(0, -1.3rem) scale(1.1);
 }
 
-.books .add {
+.add {
+  background: transparent;
+  border: none;
+  align-self: start;
+  outline: none;
+}
+
+.add img {
   width: 1.5rem;
   position: relative;
-  align-self: flex-start;
   left: 0.7rem;
   top: 2rem;
 }
 
-.add:hover {
+.add img:hover {
   opacity: 0.9;
 } 
 
