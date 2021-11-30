@@ -4,6 +4,10 @@ import add from '../../assets/images/add.svg';
 const url = 'http://books.google.com/books/'
 
 export function Books({ books, category, hide }) {
+  const handleAddToList = (book) => {
+    console.log(book)
+  }
+
   return (
     <>
       <main className="books">
@@ -26,7 +30,9 @@ export function Books({ books, category, hide }) {
                         }
                       </p>
                     </div>
-                    <img className="add" src={add} alt="+" />
+                    <button value={book} onClick={() => handleAddToList(book)} className="add">
+                      <img src={add} alt="+" />
+                    </button>
                   </li>
                 </ul>
               )
@@ -56,6 +62,9 @@ export function Books({ books, category, hide }) {
                         }
                       </p>
                     </div>
+                    <button value={book} onClick={() => handleAddToList(book)} className="add">
+                      <img src={add} alt="+" />
+                    </button>
                   </li>
                 </ul>
               )
