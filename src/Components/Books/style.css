@@ -32,6 +32,18 @@
   transform: translate(0, -1.3rem) scale(1.1);
 }
 
+.books .add {
+  width: 1.5rem;
+  position: relative;
+  align-self: flex-start;
+  left: 0.7rem;
+  top: 2rem;
+}
+
+.add:hover {
+  opacity: 0.9;
+} 
+
 .books p:nth-child(3) {
   font-size: 0.9rem;
 }
