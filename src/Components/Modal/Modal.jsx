@@ -9,7 +9,7 @@ export function Modal({ handleClick, bookTitle, bookImg }) {
 
       <div id="open-modal" className="modal-window">
         <div>
-          <a href="#" className="modal-close">X</a>
+          <a href="/#" className="modal-close">X</a>
           <p>
             Your next reading is..
           </p>
