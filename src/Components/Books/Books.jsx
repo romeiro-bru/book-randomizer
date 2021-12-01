@@ -78,7 +78,9 @@ export function Books({ books, category, hide }) {
         }
       </main>
 
-      <BooksList list={list} />
+      {list.length > 0 ? <BooksList list={list} /> :
+        ""
+      }
     </>
 
   )
