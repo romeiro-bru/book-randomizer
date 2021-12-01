@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './style.css';
 import add from '../../assets/images/add.svg';
+import { BooksList } from '../BooksList/BooksList';
 
 const url = 'http://books.google.com/books/'
 
@@ -8,9 +9,10 @@ export function Books({ books, category, hide }) {
   const [list, setList] = useState([])
 
   const handleAddToList = (book) => {
-    setList([...list, book])
+    return list.length >= 5 ? list :
+      setList([...list, book])
+
   }
-  console.log(list)
 
   return (
     <>
@@ -19,8 +21,8 @@ export function Books({ books, category, hide }) {
           books === undefined ? [] :
             books.map((book, i) => {
               return (
-                <ul hidden={hide} key={i}>
-                  <li>
+                <ul hidden={hide} >
+                  <li key={i}>
                     <a href={book.volumeInfo.infoLink} target="_blank" rel="noreferrer">
                       <img src={`${url}content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} alt="cover" />
                     </a>
@@ -47,8 +49,8 @@ export function Books({ books, category, hide }) {
           category === undefined ? [] :
             category.map((book, i) => {
               return (
-                <ul hidden={!hide} key={i}>
-                  <li>
+                <ul hidden={!hide}>
+                  <li key={i}>
                     <a href={book.volumeInfo.infoLink} target="_blank" rel="noreferrer">
                       <img src={`${url}content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} alt="cover" />
                     </a>
@@ -75,6 +77,8 @@ export function Books({ books, category, hide }) {
             })
         }
       </main>
+
+      <BooksList list={list} />
     </>
 
   )
