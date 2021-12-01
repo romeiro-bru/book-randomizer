@@ -21,7 +21,7 @@
   text-align: left;
 }
 
-.books img {
+.books img{
   border-radius: 0.5rem;
   margin-right: 1.5rem;
   transition: all 0.2s;
@@ -29,7 +29,7 @@
   animation: zoomin 0.5s;
 }
 .books img:hover {
-  transform: translate(0, -1.3rem) scale(1.1);
+  transform: translate(0, -1.2rem) scale(1.1);
 }
 
 .add {
@@ -37,17 +37,20 @@
   border: none;
   align-self: start;
   outline: none;
+  cursor: pointer;
 }
 
 .add img {
   width: 1.5rem;
   position: relative;
   left: 0.7rem;
-  top: 2rem;
+  top: 0.8rem;
+  transform: none;
 }
 
 .add img:hover {
   opacity: 0.9;
+  transform: none;
 } 
 
 .books p:nth-child(3) {
