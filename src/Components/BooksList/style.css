@@ -1,0 +1,38 @@
+.books-list {
+  position: fixed;  
+  bottom: 5.5rem;
+  left: 2rem;
+
+  width: 13%;
+  max-height: 11.5rem;
+  overflow: scroll;
+  font-size: 0.9rem;
+}
+
+.books-list ul {
+  padding: 0rem;
+  margin: 0;
+}
+
+.books-list li:first-child {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--card-bg-color);
+  margin: 0;
+}
+
+.books-list img {
+  width: 2.5rem;
+  margin-right: 0.3rem;
+}
+
+.books-list::-webkit-scrollbar {
+  width: 0.4rem;
+}
+.books-list::-webkit-scrollbar-track {
+  background: var(--card-bg-color);
+  border-radius: 5rem;
+}
+.books-list::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
