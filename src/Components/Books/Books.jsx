@@ -1,12 +1,16 @@
+import { useState } from 'react';
 import './style.css';
 import add from '../../assets/images/add.svg';
 
 const url = 'http://books.google.com/books/'
 
 export function Books({ books, category, hide }) {
+  const [list, setList] = useState([])
+
   const handleAddToList = (book) => {
-    console.log(book)
+    setList([...list, book])
   }
+  console.log(list)
 
   return (
     <>
