@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './style.css';
 import add from '../../assets/images/add.svg';
-import { BooksList } from '../BooksList/BooksList';
+import { BookList } from '../BookList/BookList';
 
 const url = 'http://books.google.com/books/'
 
@@ -78,7 +78,7 @@ export function Books({ books, category, hide }) {
         }
       </main>
 
-      {list.length > 0 ? <BooksList list={list} /> :
+      {list.length > 0 ? <BookList list={list} /> :
         ""
       }
     </>
