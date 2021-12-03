@@ -6,7 +6,9 @@ export function BookList({ list }) {
       {list.map((item, i) => (
         <ul key={i}>
           <li>
-            <img src={item.volumeInfo.imageLinks.smallThumbnail} alt="" />
+            <img src={item.volumeInfo.imageLinks.smallThumbnail !== undefined ?
+              item.volumeInfo.imageLinks.smallThumbnail : ''
+            } alt="" />
             {item.volumeInfo.title}
           </li>
         </ul>
