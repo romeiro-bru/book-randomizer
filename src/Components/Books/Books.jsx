@@ -9,9 +9,8 @@ export function Books({ books, category, hide }) {
   const [list, setList] = useState([])
 
   const handleAddToList = (book) => {
-    return list.length >= 5 ? list :
+    return list.length >= 8 ? list :
       setList([...list, book])
-
   }
 
   return (
