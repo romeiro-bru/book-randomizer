@@ -1,6 +1,6 @@
 import './style.css';
 
-export function BooksList({ list }) {
+export function BookList({ list }) {
   return (
     <section className="books-list">
       {list.map((item, i) => (
