@@ -8,7 +8,7 @@ export function Randomizer({ category }) {
   const [randomized, setRandomized] = useState([])
 
   const randomize = () => {
-    return category.volumeInfo !== undefined ?
+    return category !== undefined ?
       category[Math.floor(Math.random() * category.length)].volumeInfo : []
   }
   const handleClick = () => {
