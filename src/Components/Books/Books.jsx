@@ -1,18 +1,9 @@
-import { useState } from 'react';
 import './style.css';
 import add from '../../assets/images/add.svg';
-import { BookList } from '../BookList/BookList';
 
 const url = 'http://books.google.com/books/'
 
-export function Books({ books, category, hide }) {
-  const [list, setList] = useState([])
-
-  const handleAddToList = (book) => {
-    return list.length >= 8 ? list :
-      setList([...list, book])
-  }
-
+export function Books({ handleAddToList, button, books, category, hide }) {
   return (
     <>
       <main className="books">
@@ -37,7 +28,11 @@ export function Books({ books, category, hide }) {
                     </div>
                     <button value={book} onClick={() => handleAddToList(book)} className="add">
                       <img src={add} alt="+" />
+                      {button}
                     </button>
+                    {/* <button value={book} onClick={() => handleAddToList(book)} className="add">
+                      <img src={add} alt="+" />
+                    </button> */}
                   </li>
                 </ul>
               )
@@ -69,17 +64,18 @@ export function Books({ books, category, hide }) {
                     </div>
                     <button value={book} onClick={() => handleAddToList(book)} className="add">
                       <img src={add} alt="+" />
+                      {button}
                     </button>
+
+                    {/* <button value={book} onClick={() => handleAddToList(book)} className="add">
+                      <img src={add} alt="+" />
+                    </button> */}
                   </li>
                 </ul>
               )
             })
         }
       </main>
-
-      {list.length > 0 ? <BookList list={list} /> :
-        ""
-      }
     </>
 
   )

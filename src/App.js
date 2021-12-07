@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Categories } from './Components/Categories/Categories';
 import { Books } from './Components/Books/Books';
 import { Randomizer } from './Components/Randomizer/Randomizer';
+import { BookList } from './Components/BookList/BookList';
 import github from './assets/images/github.png';
 
 const url = 'https://www.googleapis.com/books/v1/volumes';
@@ -23,6 +24,7 @@ function App() {
   const [books, setBooks] = useState([])
   const [category, setCategory] = useState([])
   const [hide, setHide] = useState(true)
+  const [list, setList] = useState([])
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -50,6 +52,17 @@ function App() {
     fetchCategory()
   }
 
+  const handleAddToList = (book) => {
+    return list.length >= 8 ? list :
+      setList([...list, book])
+  }
+  const button = () => {
+    return (
+      <button className="add">
+      </button>
+    )
+  }
+
   return (
     <div className="App">
       <form className="search-box">
@@ -58,9 +71,14 @@ function App() {
 
       <aside>
         <Categories handleClick={handleClick} />
-        <Randomizer category={category} />
+        <Randomizer category={category} list={list} />
+        {list.length > 0 ? <BookList list={list} /> :
+          ""
+        }
       </aside>
-      <Books hide={hide} books={books} category={category} />
+      <Books button={button} handleAddToList={handleAddToList}
+        hide={hide} books={books} category={category}
+      />
       <Footer />
     </div>
   );
