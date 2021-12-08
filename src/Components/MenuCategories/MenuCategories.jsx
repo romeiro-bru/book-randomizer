@@ -12,7 +12,7 @@ const bookCategories = [
   { name: 'poetry', img: poetry }
 ]
 
-export function Categories({ handleClick }) {
+export function MenuCategories({ handleClick }) {
   return (
     <>
       <menu className="genres">

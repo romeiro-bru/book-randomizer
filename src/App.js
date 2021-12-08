@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Categories } from './Components/Categories/Categories';
+import { MenuCategories } from './Components/MenuCategories/MenuCategories';
 import { CategoryBooks } from './Components/CategoryBooks/CategoryBooks';
 import { Randomizer } from './Components/Randomizer/Randomizer';
 import { BookList } from './Components/BookList/BookList';
@@ -60,7 +60,7 @@ function App() {
         <input onChange={handleChange} type="text" placeholder="Search" />
       </form>
       <aside>
-        <Categories handleClick={handleClick} />
+        <MenuCategories handleClick={handleClick} />
         <Randomizer category={category} list={list} />
         {list.length > 0 ? <BookList list={list} /> : ""}
       </aside>
