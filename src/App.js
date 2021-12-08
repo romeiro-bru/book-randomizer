@@ -31,6 +31,7 @@ function App() {
       try {
         const response = await axios.get(`${url}?q=${search}`);
         setBooks(response.data.items);
+        setCategory([])
       } catch (error) {
         console.log(error);
       }
@@ -41,7 +42,7 @@ function App() {
   const handleChange = (e) => {
     setSearch(e.target.value)
   }
-  console.log(category)
+
   const handleClick = (e) => {
     const fetchCategory = async () => {
       try {
@@ -49,7 +50,6 @@ function App() {
         setCategory(response.data.items)
       } catch (error) {
         console.log(error)
-
       }
     }
     fetchCategory();
@@ -65,8 +65,11 @@ function App() {
         <Randomizer category={category} list={list} />
         {list.length > 0 ? <BookList list={list} /> : ""}
       </aside>
-      <CategoryBooks list={list} setList={setList} category={category} />
-      <BooksResult list={list} setList={setList} books={books} />
+
+      {category.length === 0 ?
+        <BooksResult list={list} setList={setList} books={books} />
+        : <CategoryBooks list={list} setList={setList} category={category} />
+      }
       <Footer />
     </div>
   );
