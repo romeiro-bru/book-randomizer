@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { MenuCategories } from './Components/MenuCategories/MenuCategories';
 import { CategoryBooks } from './Components/CategoryBooks/CategoryBooks';
+import { BooksResult } from './Components/BooksResult/BooksResult';
 import { Randomizer } from './Components/Randomizer/Randomizer';
 import { BookList } from './Components/BookList/BookList';
 import github from './assets/images/github.png';
@@ -64,7 +65,8 @@ function App() {
         <Randomizer category={category} list={list} />
         {list.length > 0 ? <BookList list={list} /> : ""}
       </aside>
-      <CategoryBooks list={list} setList={setList} books={books} category={category} />
+      <CategoryBooks list={list} setList={setList} category={category} />
+      <BooksResult list={list} setList={setList} books={books} />
       <Footer />
     </div>
   );
