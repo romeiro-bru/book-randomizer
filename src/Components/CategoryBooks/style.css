@@ -85,9 +85,13 @@
 }
 
 @media (max-width: 768px) {
-  .books {
-    display: inline-block;
-    margin: 1.5rem 0;
+  .books ul{
+    display: grid;
+    margin: 4rem 0;
+    font-size: 0.7rem;
+  }
+  .books li {
+    padding-left: 0rem;
   }
   .book-title, .book-author {
     width: 12rem;

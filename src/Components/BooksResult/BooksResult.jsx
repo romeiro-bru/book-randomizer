@@ -23,7 +23,9 @@ export function BooksResult({ books, list, setList }) {
                     }
                   </p>
                 </div>
-                <button value={book} onClick={() => setList([...list, book])} className="add">
+                <button value={book}
+                  onClick={() => list.length >= 8 ? list : setList([...list, book])}
+                  className="add">
                   <img src={add} alt="+" />
                 </button>
               </li>
