@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="App">
       <form className="search-box">
-        <input onChange={handleChange} type="text" placeholder="Search" />
+        <input onChange={handleChange} type="text" placeholder="Search books by name or author" />
       </form>
       <aside>
         <MenuCategories handleClick={handleClick} />
