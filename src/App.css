@@ -21,6 +21,11 @@ ul {
   list-style: none;
 }
 
+::placeholder {
+  color: var(--bg-color);
+  opacity: 0.7;
+}
+
 .App {
   text-align: center;
 }
@@ -43,9 +48,11 @@ ul {
   transition: 0.9s;
 }
 .search-box input {
+  width: 15%;
   padding: 0.5rem 1rem;
   margin: 3rem 0 1.3rem 0;
   border: none;
+  border-radius: 0.1rem;
   color: var(--secondary-color);
   font-family: 'Nunito', sans-serif;  
   font-weight: bold;
@@ -54,6 +61,9 @@ ul {
 @media (max-width: 768px) {
   .App aside {
     display: inline-block;
+  }
+  .search-box input {
+    width: 40%;
   }
   .github {
     width: 1.8rem;

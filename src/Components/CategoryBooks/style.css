@@ -1,18 +1,21 @@
-.books {
+.books ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 2rem 1rem 2rem 10rem;
 }
-.books ul {
+
+.books li {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
   border-radius: 0.5rem;
   background: linear-gradient(var(--card-bg-color), rgba(0, 0, 0, 0));
 }
 
-.books ul:nth-child(2), .books ul:nth-child(5),.books ul:nth-child(8) {
+.books li:nth-child(2), .books li:nth-child(5),.books li:nth-child(8) {
   background: linear-gradient(var(--card-bg-color2), rgba(0, 0, 0, 0));
 }
-.books ul:nth-child(3), .books ul:nth-child(6), .books ul:last-child {
+.books li:nth-child(3), .books li:nth-child(6), .books li:last-child {
   background: linear-gradient(var(--card-bg-color3), rgba(0, 0, 0, 0));
 }
 
@@ -21,7 +24,7 @@
   text-align: left;
 }
 
-.books img{
+.books img {
   border-radius: 0.5rem;
   margin-right: 1.5rem;
   transition: all 0.2s;
@@ -82,9 +85,13 @@
 }
 
 @media (max-width: 768px) {
-  .books {
-    display: inline-block;
-    margin: 1.5rem 0;
+  .books ul{
+    display: grid;
+    margin: 4rem 0;
+    font-size: 0.7rem;
+  }
+  .books li {
+    padding-left: 0rem;
   }
   .book-title, .book-author {
     width: 12rem;
