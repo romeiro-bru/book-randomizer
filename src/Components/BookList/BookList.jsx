@@ -1,5 +1,5 @@
 import './style.css';
-import imgnotavailable from '../../assets/images/imgnotavailable.png';
+const url = 'http://books.google.com/books/'
 
 export function BookList({ list }) {
   return (
@@ -7,9 +7,7 @@ export function BookList({ list }) {
       <ul>
         {list.map((item, i) => (
           <li key={i}>
-            <img src={item.volumeInfo.imageLinks.smallThumbnail !== undefined ?
-              item.volumeInfo.imageLinks.smallThumbnail : { imgnotavailable }
-            } alt="" />
+            <img src={`${url}content?id=${item.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} alt="cover" />
             {item.volumeInfo.title}
           </li>
         ))}
