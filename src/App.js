@@ -55,8 +55,8 @@ function App() {
     fetchCategory();
   }
 
-  function onlyUnique(value, index, self) {
-    return self.indexOf(value) === index;
+  function onlyUnique(obj, index, array) {
+    return array.indexOf(obj) === index;
   }
 
   return (
