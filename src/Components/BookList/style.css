@@ -14,7 +14,7 @@
   margin: 0;
 }
 
-.books-list li:first-child {
+.books-list li {
   display: flex;
   align-items: center;
   border-top: 1px solid var(--card-bg-color);

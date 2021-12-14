@@ -21,7 +21,7 @@ function Footer() {
 }
 
 function App() {
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('top books')
   const [books, setBooks] = useState([])
   const [category, setCategory] = useState([])
   const [list, setList] = useState([])
@@ -55,6 +55,10 @@ function App() {
     fetchCategory();
   }
 
+  function onlyUnique(obj, index, array) {
+    return array.indexOf(obj) === index;
+  }
+
   return (
     <div className="App">
       <form className="search-box">
@@ -63,12 +67,12 @@ function App() {
       <aside>
         <MenuCategories handleClick={handleClick} />
         <Randomizer category={category} list={list} />
-        {list.length > 0 ? <BookList list={list} /> : ""}
+        {list.length > 0 ? <BookList list={list.filter(onlyUnique)} /> : ""}
       </aside>
 
       {category.length === 0 ?
-        <BooksResult list={list} setList={setList} books={books} />
-        : <CategoryBooks list={list} setList={setList} category={category} />
+        <BooksResult list={list.filter(onlyUnique)} setList={setList} books={books} />
+        : <CategoryBooks list={list.filter(onlyUnique)} setList={setList} category={category} />
       }
       <Footer />
     </div>

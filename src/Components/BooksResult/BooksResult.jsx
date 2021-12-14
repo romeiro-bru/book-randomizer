@@ -16,7 +16,11 @@ export function BooksResult({ books, list, setList }) {
                 <div>
                   <h2 className="book-title">{book.volumeInfo.title}</h2>
                   <p className="book-author">{book.volumeInfo.authors}</p>
-                  <p>{book.volumeInfo.pageCount} pages</p>
+                  <p>
+                    {book.volumeInfo.pageCount !== undefined ?
+                      book.volumeInfo.pageCount : '120'
+                    } pages
+              </p>
                   <p className="book-categorie">
                     {book.volumeInfo.categories !== undefined ?
                       book.volumeInfo.categories : 'Others'
