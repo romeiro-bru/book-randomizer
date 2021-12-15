@@ -29,8 +29,8 @@
 .books-list button {
   display: flex;
   position: relative;
-  bottom: 1.4rem;
-  left: 0.5rem;
+  bottom: 1.3rem;
+  left: 0.7rem;
   padding: 0;
   border: none;
   background: transparent;
@@ -41,6 +41,11 @@
 .books-list button:hover {
   color: var(--secondary-color);
   transition: 0.9s;
+}
+
+.books-list button img {
+  width: 0.9rem;
+  margin: 0;
 }
 
 .books-list::-webkit-scrollbar {
