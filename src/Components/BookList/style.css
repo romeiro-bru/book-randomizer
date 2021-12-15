@@ -26,6 +26,23 @@
   margin-right: 0.3rem;
 }
 
+.books-list button {
+  display: flex;
+  position: relative;
+  bottom: 1.4rem;
+  left: 0.5rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--primary-color);
+  font-weight: bold;
+  outline: none;
+}
+.books-list button:hover {
+  color: var(--secondary-color);
+  transition: 0.9s;
+}
+
 .books-list::-webkit-scrollbar {
   width: 0.4rem;
 }
