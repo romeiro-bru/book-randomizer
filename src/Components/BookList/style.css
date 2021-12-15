@@ -39,7 +39,7 @@
   outline: none;
 }
 .books-list button:hover {
-  color: var(--secondary-color);
+  opacity: 0.8;
   transition: 0.9s;
 }
 
