@@ -40,7 +40,7 @@ function App() {
   }, [search]);
 
   const handleChange = (e) => {
-    setSearch(e.target.value)
+    search.length === 1 ? setSearch('top books') : setSearch(e.target.value)
   }
 
   const handleClick = (e) => {
@@ -49,6 +49,7 @@ function App() {
         const response = await axios.get(`${url}/?q=subject:${e.target.value}`)
         setCategory(response.data.items)
       } catch (error) {
+        alert('Sorry, try again.')
         console.log(error)
       }
     }
@@ -67,7 +68,7 @@ function App() {
       <aside>
         <MenuCategories handleClick={handleClick} />
         <Randomizer category={category} list={list} />
-        {list.length > 0 ? <BookList list={list.filter(onlyUnique)} /> : ""}
+        {list.length > 0 ? <BookList list={list.filter(onlyUnique)} setList={setList} /> : ""}
       </aside>
 
       {category.length === 0 ?
