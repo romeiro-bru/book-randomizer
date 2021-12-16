@@ -6,6 +6,7 @@ import { CategoryBooks } from './Components/CategoryBooks/CategoryBooks';
 import { BooksResult } from './Components/BooksResult/BooksResult';
 import { Randomizer } from './Components/Randomizer/Randomizer';
 import { BookList } from './Components/BookList/BookList';
+import { CategoryBookshelf } from './Components/CategoryBookshelf/CategoryBookshelf';
 import github from './assets/images/github.png';
 
 const url = 'https://www.googleapis.com/books/v1/volumes';
@@ -43,11 +44,14 @@ function App() {
     search.length === 1 ? setSearch('top books') : setSearch(e.target.value)
   }
 
+
   const handleClick = (e) => {
     const fetchCategory = async () => {
       try {
         const response = await axios.get(`${url}/?q=subject:${e.target.value}`)
-        setCategory(response.data.items)
+        e.target.value === "bookshelf" ?
+          setCategory(list) :
+          setCategory(response.data.items)
       } catch (error) {
         alert('Sorry, try again.')
         console.log(error)
@@ -66,14 +70,15 @@ function App() {
         <input onChange={handleChange} type="text" placeholder="Search books by name or author" />
       </form>
       <aside>
-        <MenuCategories handleClick={handleClick} />
+        <MenuCategories handleClick={handleClick} list={list} />
         <Randomizer category={category} list={list} />
         {list.length > 0 ? <BookList list={list.filter(onlyUnique)} setList={setList} /> : ""}
       </aside>
 
       {category.length === 0 ?
-        <BooksResult list={list.filter(onlyUnique)} setList={setList} books={books} />
-        : <CategoryBooks list={list.filter(onlyUnique)} setList={setList} category={category} />
+        <BooksResult list={list.filter(onlyUnique)} setList={setList} books={books} /> :
+        category === list ? <CategoryBookshelf list={list.filter(onlyUnique)} setList={setList} category={category} /> :
+          <CategoryBooks list={list.filter(onlyUnique)} setList={setList} category={category} />
       }
       <Footer />
     </div>
