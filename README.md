@@ -5,9 +5,9 @@
 </p>
 
 ## Features
-* Pick a literary genre or ✔️
-* Search for a title or author in the search field  ✔️
-* Create a list of books you would like to read ✔️
+* Create your own book list or ✔️
+* Pick a literary genre ✔️
+* Search for a title or author and add to your list ✔️
 * Remove a book from your list ✔️
 * Select the list from which you wish to read ✖️
 * Click on the randomizer to see what your next reading will be ✔️  
