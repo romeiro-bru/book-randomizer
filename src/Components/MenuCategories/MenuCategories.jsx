@@ -4,12 +4,14 @@ import fantasy from '../../assets/images/wizard.png';
 import fiction from '../../assets/images/ufo.png';
 import romance from '../../assets/images/talk.png';
 import poetry from '../../assets/images/poetry.png';
+import bookshelf from '../../assets/images/bookshelf.png';
 
 const bookCategories = [
   { name: 'fantasy', img: fantasy },
   { name: 'fiction', img: fiction },
   { name: 'romance', img: romance },
-  { name: 'poetry', img: poetry }
+  { name: 'poetry', img: poetry },
+  { name: 'bookshelf', img: bookshelf }
 ]
 
 export function MenuCategories({ handleClick }) {
