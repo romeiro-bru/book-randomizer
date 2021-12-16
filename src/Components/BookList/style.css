@@ -4,7 +4,7 @@
   left: 2rem;
 
   width: 13%;
-  max-height: 11.5rem;
+  max-height: 9.5rem;
   overflow: scroll;
   font-size: 0.9rem;
 }
@@ -57,4 +57,10 @@
 }
 .books-list::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .books-list {
+    display: none;
+  }
 }
