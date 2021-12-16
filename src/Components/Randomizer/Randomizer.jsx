@@ -4,7 +4,7 @@ import './style.css';
 import dices from '../../assets/images/dices.svg';
 
 
-export function Randomizer({ category, list }) {
+export function Randomizer({ category }) {
   const [randomized, setRandomized] = useState([])
 
   const randomize = () => {
