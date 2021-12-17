@@ -4,12 +4,13 @@ import './style.css';
 import dices from '../../assets/images/dices.svg';
 
 
-export function Randomizer({ category }) {
+export function Randomizer({ category, books }) {
   const [randomized, setRandomized] = useState([])
 
   const randomize = () => {
-    return category !== undefined ?
-      category[Math.floor(Math.random() * category.length)].volumeInfo : []
+    return category.length !== 0 ?
+      category[Math.floor(Math.random() * category.length)].volumeInfo :
+      books[Math.floor(Math.random() * books.length)].volumeInfo
   }
   const handleClick = () => {
     setRandomized(randomize)
