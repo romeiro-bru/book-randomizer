@@ -41,7 +41,7 @@ function App() {
   }, [search]);
 
   const handleChange = (e) => {
-    search.length === 1 ? setSearch('top books') : setSearch(e.target.value)
+    search.length <= 1 ? setSearch('top books') : setSearch(e.target.value)
   }
 
 
