@@ -77,7 +77,7 @@ function App() {
 
       {category.length === 0 ?
         <BooksResult list={list.filter(onlyUnique)} setList={setList} books={books} /> :
-        category === list ? <CategoryBookshelf list={list.filter(onlyUnique)} setList={setList} category={category} /> :
+        category === list ? <CategoryBookshelf list={list.filter(onlyUnique)} setList={setList} /> :
           <CategoryBooks list={list.filter(onlyUnique)} setList={setList} category={category} />
       }
       <Footer />

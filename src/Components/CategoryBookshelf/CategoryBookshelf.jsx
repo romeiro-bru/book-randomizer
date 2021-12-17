@@ -3,13 +3,11 @@ import remove from '../../assets/images/x.png';
 
 const url = 'http://books.google.com/books/'
 
-export function CategoryBookshelf({ category, list, setList }) {
+export function CategoryBookshelf({ list, setList }) {
   const handleRemoveBook = (book) => {
     setList(list.filter((el) => el !== book))
   }
 
-  console.log(category)
-  console.log(list)
   return (
     <>
       <main className="books category-bookshelf">
