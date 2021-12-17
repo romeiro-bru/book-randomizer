@@ -33,7 +33,7 @@ export function CategoryBookshelf({ list, setList }) {
                       }
                     </p>
                   </div>
-                  <button onClick={() => handleRemoveBook(book)}>
+                  <button id="btn-remove-book" onClick={() => handleRemoveBook(book)}>
                     <img src={remove} alt="x" />
                   </button>
                 </li>
