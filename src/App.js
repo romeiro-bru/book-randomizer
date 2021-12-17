@@ -71,7 +71,7 @@ function App() {
       </form>
       <aside>
         <MenuCategories handleClick={handleClick} list={list} />
-        <Randomizer category={category} />
+        <Randomizer category={category} books={books} />
         {list.length > 0 ? <BookList list={list.filter(onlyUnique)} setList={setList} /> : ""}
       </aside>
 
