@@ -1,5 +1,17 @@
 <h1 align="center">Random Book Selector</h1>
 
+> [Project deploy](https://vigorous-kowalevski-85a564.netlify.app/)
+
+<br>
+
+> This app allows you to search for a book, author or category.
+> <br>
+> You can also check out fantasy, fiction, romance and poetry books books by clicking the buttons.
+> <br>
+> It is possible to create your own list and remove books from the list.
+> <br>
+> You can radomize a book from any search, category or list you create.
+
 <p  align="center">
   <img  src="https://user-images.githubusercontent.com/56081906/146607763-ee504927-105c-47dc-b6a3-46aabe801d95.gif"  height="330" alt="book">
 </p>
@@ -9,9 +21,10 @@
 
 ## Features
 
-* Search for a book, author, genre ✔️
-* Create your own book list ✔️
-* Pick a literary genre ✔️
+* Search for a book, author, genre  in the search field ✔️
+* Create your own book list clicking on ➕ button ✔️
+* It is possible to remove a book clicking on ✖️ button in your list or bookshelf ✔️
+* Choose a literary genre by clicking the corresponding buttons ✔️
 * Click on randomizer to check out your next reading 🤓 ✔️  
 
 ## Api Reference
