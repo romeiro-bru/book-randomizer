@@ -1,7 +1,10 @@
 <h1 align="center">Random Book Selector</h1>
 
 <p  align="center">
-  <img  src="https://user-images.githubusercontent.com/56081906/146607763-ee504927-105c-47dc-b6a3-46aabe801d95.gif"  height="350" alt="book">
+  <img  src="https://user-images.githubusercontent.com/56081906/146607763-ee504927-105c-47dc-b6a3-46aabe801d95.gif"  height="330" alt="book">
+</p>
+<p  align="center">
+  <img  src="https://user-images.githubusercontent.com/56081906/147000264-8951e11c-ba1f-453c-ae63-aa427922e747.gif"  height="330" alt="book">
 </p>
 
 ## Features
