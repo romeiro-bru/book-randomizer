@@ -5,15 +5,14 @@
 </p>
 
 ## Features
-* Create your own book list or ✔️
+
+* Search for a book, author, genre ✔️
+* Create your own book list ✔️
 * Pick a literary genre ✔️
-* Search for a title or author and add to your list ✔️
-* Remove a book from your list ✔️
-* Select the list from which you wish to read ✖️
-* Click on the randomizer to see what your next reading will be ✔️  
+* Click on randomizer to check out your next reading 🤓 ✔️  
 
 ## Api Reference
-The [Google Books API](https://developers.google.com/books/docs/overview) has a vision to digitize the world's books.
+[Google Books API](https://developers.google.com/books/docs/overview)
 
 ## Technologies:mag_right:
 * React :atom:
