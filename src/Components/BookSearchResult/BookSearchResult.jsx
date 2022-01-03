@@ -2,7 +2,7 @@ import add from '../../assets/images/add.svg';
 
 const url = 'http://books.google.com/books/'
 
-export function BooksResult({ books, list, setList }) {
+export function BookSearchResult({ books, list, setList }) {
   return (
     <>
       <main className="books">

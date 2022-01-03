@@ -1,7 +1,7 @@
 .category-bookshelf button {
   display: flex;
   position: relative;
-  bottom: 3rem;
+  bottom: 4.5rem;
   left: 0.6rem;
   padding: 0;
   border: none;
@@ -10,11 +10,13 @@
   font-weight: bold;
   outline: none;
 }
-.category-bookshelf button:hover {
+
+#btn-remove-book:hover {
   opacity: 0.8;
   transition: 0.9s;
 }
 
-.category-bookshelf button img {
+#btn-remove-book img {
   width: 1.7rem;
+  transform: none;
 }
