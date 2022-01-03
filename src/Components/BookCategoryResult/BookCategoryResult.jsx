@@ -3,7 +3,7 @@ import add from '../../assets/images/add.svg';
 
 const url = 'http://books.google.com/books/'
 
-export function CategoryBooks({ category, list, setList }) {
+export function BookCategoryResult({ category, list, setList }) {
   return (
     <>
       <main className="books">

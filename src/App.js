@@ -2,8 +2,8 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { MenuCategories } from './Components/MenuCategories/MenuCategories';
-import { CategoryBooks } from './Components/CategoryBooks/CategoryBooks';
-import { BooksResult } from './Components/BooksResult/BooksResult';
+import { BookCategoryResult } from './Components/BookCategoryResult/BookCategoryResult';
+import { BookSearchResult } from './Components/BookSearchResult/BookSearchResult';
 import { Randomizer } from './Components/Randomizer/Randomizer';
 import { BookList } from './Components/BookList/BookList';
 import { CategoryBookshelf } from './Components/CategoryBookshelf/CategoryBookshelf';
@@ -76,9 +76,9 @@ function App() {
       </aside>
 
       {category.length === 0 ?
-        <BooksResult list={list.filter(onlyUnique)} setList={setList} books={books} /> :
+        <BookSearchResult list={list.filter(onlyUnique)} setList={setList} books={books} /> :
         category === list ? <CategoryBookshelf list={list.filter(onlyUnique)} setList={setList} /> :
-          <CategoryBooks list={list.filter(onlyUnique)} setList={setList} category={category} />
+          <BookCategoryResult list={list.filter(onlyUnique)} setList={setList} category={category} />
       }
       <Footer />
     </div>
