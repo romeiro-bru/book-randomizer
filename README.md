@@ -1,11 +1,14 @@
-<h1 align="center">Random Book Selector</h1>
+<h1 align="center">
+  Book Randomizer
+ <img src="https://camo.githubusercontent.com/b4193c7a86998147f7f72871a479c8df3b661f2cba75582351b22774a7c22f0b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e65746c6966792d737563636573732d627269676874677265656e2e737667" />
+</h1>
 <p>
-  <img  src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"  height="25" alt="html">
-  <img  src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"  height="25" alt="css">
-  <img  src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"  height="25" alt="react">
+  <img  src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"  height="25" alt="html" />
+  <img  src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"  height="25" alt="css" />
+  <img  src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"  height="25" alt="react" />
 </p>
 
-> [Project deploy](https://vigorous-kowalevski-85a564.netlify.app/)
+> [Project deploy](https://vigorous-kowalevski-85a564.netlify.app/) 
 
 > This app allows you to search for a book, author or category.
 > <br>
