@@ -33,6 +33,15 @@
 * Choose a literary genre by clicking the corresponding buttons ✔️
 * Click on randomizer to check out your next reading 🤓 ✔️  
 
+## About Book Randomizer
+As reader, sometimes I'm not sure what to read next because I have so many amazing books on my list!
+<br>
+So I had this idea to help me in this task. I wanted to be able to create my own list and then randomly generate
+<br>
+a book to read next and also have predefined lists in case I wanted a surprise.
+<br>
+Hope this helps other book lovers choose what to read next. 🧚‍♀️ 🥰
+ 
 ## Api Reference
 [Google Books API](https://developers.google.com/books/docs/overview)
 
