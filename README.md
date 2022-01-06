@@ -34,7 +34,7 @@
 * Click on randomizer to check out your next reading 🤓 ✔️  
 
 ## About Book Randomizer
-As reader, sometimes I'm not sure what to read next because I have so many amazing books on my list!
+As a reader, sometimes I'm not sure what to read next because I have so many amazing books on my list!
 <br>
 So I had this idea to help me in this task. I wanted to be able to create my own list and then randomly generate
 <br>
