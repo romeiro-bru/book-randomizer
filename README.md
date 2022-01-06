@@ -37,7 +37,6 @@
 As a reader, sometimes I'm not sure what to read next because I have so many amazing books on my list!
 <br>
 So I had the idea to build this app to help me in this task. I wanted to be able to create my own list and then randomly generate
-<br>
 a book to read next and also have predefined lists in case I wanted a surprise.
 <br>
 Hope this helps other book lovers choose what to read next. 🧚‍♀️ 🥰
