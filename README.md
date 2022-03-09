@@ -54,10 +54,9 @@ Prerequisite to run the following commands <strong>[Node.js](https://nodejs.org/
                            <strong>[Git](https://git-scm.com/downloads)</strong>, 
                            <strong>[Yarn](https://yarnpkg.com/)</strong>.
 <br>
-```
-git clone https://github.com/romeiro-bru/random-book-selector.git
-yarn
-```
+```git clone https://github.com/romeiro-bru/random-book-selector.git```
+<br>
+```yarn install```
 
 Run in the project directory ```yarn start```
 
