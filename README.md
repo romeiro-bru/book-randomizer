@@ -29,7 +29,7 @@
 
 * Search for a book, author, genre  in the search field ✔️
 * Create your own book list clicking on ➕ button ✔️
-* It is possible to remove a book clicking on ✖️ button in your list or bookshelf ✔️
+* Remove a book clicking on ✖️ button in your list or bookshelf ✔️
 * Choose a literary genre by clicking the corresponding buttons ✔️
 * Click on randomizer to check out your next reading 🤓 ✔️  
 
